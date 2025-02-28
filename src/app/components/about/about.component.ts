@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
       <div class="bio-section">
         <div class="avatar-container">
           <img [src]="'assets/images/avatar.jpg'" alt="Developer Avatar" class="avatar" />
-          <!--<img src="assets/images/avatar.jpg" alt="Developer Avatar" class="avatar" />-->
+          <!--<img src="assets/images/avatar.jpg"  alt="Developer Avatar" class="avatar" />-->
         </div>
         <p class="bio-text">
           Hi, I am <strong>Bisma Humanyun</strong>. 
