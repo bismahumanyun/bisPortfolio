@@ -1,0 +1,80 @@
+.portfolio-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+
+  .section-title {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--secondary-color);
+  }
+
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+
+    .portfolio-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .project-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+      }
+
+      .project-title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--secondary-color);
+        margin-bottom: 0.5rem;
+      }
+
+      .project-description {
+        font-size: 0.9rem;
+        color: var(--text-color);
+        line-height: 1.6;
+        margin-bottom: 1rem;
+      }
+
+      .project-details {
+        margin-bottom: 1rem;
+
+        .detail-label {
+          font-weight: 500;
+          color: var(--secondary-color);
+        }
+
+        .detail-value {
+          font-size: 0.9rem;
+          color: var(--text-color);
+        }
+
+        .achievements-list {
+          list-style-type: disc;
+          padding-left: 1.5rem;
+          margin-top: 0.5rem;
+
+          li {
+            font-size: 0.9rem;
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}

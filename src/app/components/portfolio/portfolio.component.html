@@ -1,0 +1,20 @@
+<div class="portfolio-container">
+    <h2 class="section-title">Portfolio</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-card" *ngFor="let project of projects">
+        <!--><img [src]="project.image" [alt]="project.title" class="project-image" />-->
+        <h3 class="project-title">{{ project.title }}</h3>
+        <p class="project-description">{{ project.description }}</p>
+        <div class="project-details">
+          <span class="detail-label">Technologies:</span>
+          <span class="detail-value">{{ project.technologies.join(', ') }}</span>
+        </div>
+        <div class="project-details">
+          <span class="detail-label">Achievements:</span>
+          <ul class="achievements-list">
+            <li *ngFor="let achievement of project.achievements">{{ achievement }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
