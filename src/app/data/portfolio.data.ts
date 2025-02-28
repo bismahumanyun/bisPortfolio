@@ -6,7 +6,7 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
         description: 'Retro arcade-style game built with Three.js',
         image: 'assets/images/space-invader.jpg'
     },
-    // Add more projects
+
 ];
 
 export const EXPERIENCE_DATA: ExperienceItem[] = [
@@ -16,11 +16,11 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
         duration: '2020-2022',
         description: 'Developed core gameplay mechanics for AAA titles'
     },
-    // Add more experiences
+
 ];
 
 export const SKILLS_DATA: Skill[] = [
     { name: 'Angular', level: 95 },
     { name: 'TypeScript', level: 90 },
-    // Add more skills
+
 ];

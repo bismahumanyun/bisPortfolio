@@ -6,7 +6,7 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { FooterComponent } from "./components/footer/footer.component";
+import { FooterComponent } from './components/footer/footer.component';
 
 @Component({
   standalone: true,
@@ -18,7 +18,7 @@ import { FooterComponent } from "./components/footer/footer.component";
     PortfolioComponent,
     ExperienceComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
   ],
   selector: 'app-root',
   template: `
@@ -37,13 +37,22 @@ import { FooterComponent } from "./components/footer/footer.component";
         <app-experience></app-experience>
       </section>
       <section id="contact">
-        <app-contact></app-contact>
+        <app-contact
+          [contactEmail]="contactEmail"
+          (formSubmitted)="onFormSubmitted($event)"
+        ></app-contact>
       </section>
-      <!-- <section id="footer"> -->
-        <app-footer></app-footer>
-      <!-- </section> -->
     </main>
+    <app-footer></app-footer>
   `,
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent { }
+export class AppComponent {
+  contactEmail = 'bismahumanyun@gmail.com'; // Input data for ContactComponent
+
+  // Handle form submission event
+  onFormSubmitted(formData: { name: string; email: string; message: string }) {
+    console.log('Form Data Received in Parent:', formData);
+    alert(`Message sent successfully!\nName: ${formData.name}\nEmail: ${formData.email}\nMessage: ${formData.message}`);
+  }
+}
