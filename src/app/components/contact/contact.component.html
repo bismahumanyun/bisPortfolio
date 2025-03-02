@@ -1,7 +1,7 @@
 <div class="contact-container">
   <h2 class="section-title">Contact Me</h2>
   <div class="contact-content">
-    <!-- Personal Details Column -->
+    <!-- Personal Details -->
     <div class="contact-details">
       <h3 class="details-title">Get in Touch</h3>
       <div class="contact-info">
@@ -12,17 +12,18 @@
       </div>
     </div>
 
-    <!-- Contact Form Column -->
+    <!-- Contact Form -->
     <div class="contact-form">
       <h3 class="form-title">Send a Message</h3>
-      <form (ngSubmit)="onSubmit()">
+      <form (submit)="onSubmit()">
         <div class="form-group">
           <label for="name">Name</label>
           <input
             type="text"
             id="name"
             name="name"
-            [(ngModel)]="formData.name"
+            [value]="name()"
+            (input)="updateName($event)"
             placeholder="Enter your name"
             required
           />
@@ -33,7 +34,8 @@
             type="email"
             id="email"
             name="email"
-            [(ngModel)]="formData.email"
+            [value]="email()"
+            (input)="updateEmail($event)"
             placeholder="Enter your email"
             required
           />
@@ -43,7 +45,8 @@
           <textarea
             id="message"
             name="message"
-            [(ngModel)]="formData.message"
+            [value]="message()"
+            (input)="updateMessage($event)"
             placeholder="Enter your message"
             rows="5"
             required
@@ -52,11 +55,19 @@
         <button type="submit" class="submit-button">Send Message</button>
       </form>
     </div>
+
     <!-- Google Map -->
-  <div class="contact-map">
-    <h3 class="details-title">Find Me Here</h3>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d743883.4780684926!2d-81.11564434300435!3d43.25572147501467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882c986c27de778f%3A0x2b6aee56d8df0e21!2sHamilton%2C%20ON%2C%20Canada!5e0!3m2!1sen!2sae!4v1740705184610!5m2!1sen!2sae" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>
+    <div class="contact-map">
+      <h3 class="details-title">Find Me Here</h3>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d743883.4780684926!2d-81.11564434300435!3d43.25572147501467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882c986c27de778f%3A0x2b6aee56d8df0e21!2sHamilton%2C%20ON%2C%20Canada!5e0!3m2!1sen!2sae!4v1740705184610!5m2!1sen!2sae"
+        width="600"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
   </div>
 </div>
- 
